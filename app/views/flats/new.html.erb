@@ -1,0 +1,14 @@
+<div class="container">
+
+  <div class="card p-5 m-5">
+    <h1>Add flat</h1>
+    <%= simple_form_for @flat do |f| %>
+      <%= f.input :name %>
+      <%= f.input :address %>
+      <%= f.input :number_of_guests %>
+      <%= f.input :price_per_night %>
+      <%= f.button :submit, :class => "btn btn-primary" %>
+      <%= link_to "back", flats_path, class: "btn btn-primary"  %>
+    <% end %>
+  </div>
+</div>

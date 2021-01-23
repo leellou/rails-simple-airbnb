@@ -1,0 +1,39 @@
+<div class="top-header d-flex justify-content-between">
+  <p>Simple Airbnb</p>
+  <%= link_to 'Add Flat', new_flat_path(@flat), class: "btn btn-outline-primary" %>
+</div>
+
+<div class="container">
+
+  <h1>All our Flats </h1>
+  <div>
+    <div class="d-flex justify-content-between">
+      <% @flats.each do |flat| %>
+        <div class="card m-1">
+          <div class="card-info">
+
+            <div class="card-body">
+              <h2> <%= flat.name %> </h2>
+              <p> <%= flat.address %> </p>
+
+              <div class="d-flex align-items-center">
+                <p><i class="fas fa-user-friends m-2"></i></p>
+                <p><%= flat.number_of_guests %></p>
+                <p><i class="fas fa-euro-sign m-2"></i></p>
+                <p><%= flat.price_per_night %></p>
+              </div>
+            </div>
+
+          </div>
+          <div class="card-body">
+            <a href="" class="btn btn-link">More info</a>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+
+
+
+</div>
